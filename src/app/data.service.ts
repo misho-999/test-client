@@ -10,7 +10,7 @@ export class DataService {
   constructor(private httpClient: HttpClient) { }
 
   getTestPage() {
-    return this.httpClient.get<Array<ITestData>>('http://localhost:8080/api/test');
+    return this.httpClient.get<Array<ITestData>>('http://localhost:8080/test');
   }
 
 

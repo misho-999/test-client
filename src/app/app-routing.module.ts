@@ -10,7 +10,7 @@ const routes: Routes = [
     component: IndexComponent
     },
   {
-    path: 'api/test',
+    path: 'test',
     component: TestComponent,
   },
 ];
