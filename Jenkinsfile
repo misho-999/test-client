@@ -20,7 +20,7 @@ pipeline {
                         ]]])
                         
                 sh 'npm install'
-                sh "ng build -c $ENVIRONMENT"
+                sh "ng build"
             }
         }
         stage('Deploy') {
@@ -34,7 +34,7 @@ pipeline {
                   	remote.password = ''
                   	remote.logLevel = "INFO"
 
-                   	sh 'sudo systemctl stop myfishing'
+                   	sh 'sudo mv dist'
                    	sh 'sudo systemctl start myfishing'
                 }
             }
