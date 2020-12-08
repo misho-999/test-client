@@ -20,7 +20,7 @@ pipeline {
                         ]]])
                         
                 sh 'npm install'
-                sh "ng build"
+                sh "ng build --prod"
             }
         }
         stage('Deploy') {
