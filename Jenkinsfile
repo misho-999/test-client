@@ -22,10 +22,9 @@ pipeline {
                 sh 'npm install'
                 sh 'sudo rm -rf lampp /var/www/html/testClient'
 		sh 'sudo cp -a /home/testClient/dist/testClient /var/www/html/'
-
             }
         }
-        stage('Deploy') {
+        stage('Restart Backend') {
             steps {
                 script {
  			def remote = [:]
