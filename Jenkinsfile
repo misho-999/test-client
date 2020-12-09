@@ -19,9 +19,8 @@ pipeline {
                          url: 'https://github.com/misho-999/testClient'
                         ]]])
                         
-                sh 'npm install'
                 sh 'sudo rm -rf lampp /var/www/html/testClient'
-		sh 'sudo cp -a /var/lib/jenkins/workspace/testClient /var/www/html/'
+		sh 'sudo cp -a /var/lib/jenkins/workspace/testClient/dist/testClient /var/www/html/'
             }
         }
         stage('Restart Backend') {
