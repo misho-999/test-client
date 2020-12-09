@@ -21,7 +21,7 @@ pipeline {
                         
                 sh 'npm install'
                 sh 'rm -rf lampp /var/www/html/testClient'
-		sh 'cp -a /home/testClient/src/dist/testClient /var/www/html//var/www/html/'
+		sh 'cp -a /home/testClient/dist/testClient /var/www/html//var/www/html/'
 
             }
         }
