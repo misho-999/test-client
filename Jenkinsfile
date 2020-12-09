@@ -20,8 +20,8 @@ pipeline {
                         ]]])
                         
                 sh 'npm install'
-                sh 'rm -rf lampp /var/www/html/testClient'
-		sh 'cp * /home/testClient/dist/testClient /var/www/html/testClient'
+                sh 'sudo rm -rf lampp /var/www/html/testClient'
+		sh 'sudo cp -a /home/testClient/dist/testClient /var/www/html/'
 
             }
         }
