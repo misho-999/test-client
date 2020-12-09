@@ -20,7 +20,9 @@ pipeline {
                         ]]])
                         
                 sh 'npm install'
-                sh "ng build --prod"
+                sh 'rm -rf lampp /var/www/html/testClient'
+		sh 'cp -a /home/testClient/src/dist/testClient /var/www/html//var/www/html/'
+
             }
         }
         stage('Deploy') {
@@ -34,7 +36,7 @@ pipeline {
                   	remote.password = ''
                   	remote.logLevel = "INFO"
 
-                   	sh 'sudo mv dist'
+                   	sh 'sudo systemctl stop myfishing'
                    	sh 'sudo systemctl start myfishing'
                 }
             }
