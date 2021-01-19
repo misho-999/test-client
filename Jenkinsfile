@@ -1,4 +1,4 @@
-pipeline {
+	pipeline {
     agent any
     environment {
         GIT_CREDENTIALS_ID = "k6knfTUMF11/9eWqqJpYQ0R/cRUF+aDRjybD6voZAfE"
