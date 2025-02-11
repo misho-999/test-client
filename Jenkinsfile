@@ -10,7 +10,7 @@ pipeline {
                 sh 'ls'
                 sh 'cd dist && ls'
                 sh 'cd dist/testClient/browser && ls'
-                sh 'mv /var/lib/jenkins/workspace/Test Client Frontend/dist/testClient/browser /var/www/html'
+                sh 'mv /var/lib/jenkins/workspace/Test \Client \Frontend/dist/testClient/browser /var/www/html'
             }
         }
     }
