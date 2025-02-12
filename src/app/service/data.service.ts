@@ -13,7 +13,7 @@ export class DataService {
 
   getTestPage() {
     // return this.httpClient.get<Array<ITestData>>('http://localhost:8080/test');
-    return this.httpClient.get<ITestData[]>(this.urlService.fullUrl('test'));
+    return this.httpClient.get<ITestData[]>(this.urlService.fullUrl('api/test'));
   }
 
   // private createHttpOptions(): unknown {
